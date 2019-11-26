@@ -1,0 +1,93 @@
+{
+  "name": "background-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "nodemonConfig": {
+    "ignore": [
+      "test/*",
+      "dist/*"
+    ]
+  },
+  "nyc": {
+    "require": [
+      "@babel/register"
+    ],
+    "sourceMap": false,
+    "instrument": false
+  },
+  "scripts": {
+    "start": "nodemon bin/app.js",
+    "build": "babel . -s -D -d dist --presets env,stage-0",
+    "start:watch": "pm2 start bin/app.js --name background-app --watch",
+    "stop:watch": "pm2 stop bin/app.js --name background-app --watch",
+    "restart:watch": "pm2 restart bin/app.js --name background-app --watch",
+    "test": "cross-env NODE_ENV=test nyc --reporter=text --reporter=html mocha --recursive babel-register test/**/*.spec.js",
+    "workers:dev": "pm2 kill && pm2 flush && pm2 start workers.config.js --env development && pm2 logs --lines 200",
+    "workers:prod-reload": "pm2 reload workers.config.js --env production",
+    "workers:prod-start": "pm2 start workers.config.js --env production"
+  },
+  "keywords": [
+    "Boiler",
+    "template",
+    "node",
+    "template",
+    "template"
+  ],
+  "author": "Akomolafe Tosin",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/joi": "^15.1.1",
+    "amqplib": "^0.5.5",
+    "axios": "^0.19.0",
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.19.0",
+    "convict": "^5.0.0",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.0",
+    "express-joi-validation": "^2.0.1",
+    "fs": "0.0.1-security",
+    "helmet": "^3.21.0",
+    "i18n": "^0.8.3",
+    "mongoose": "^5.6.13",
+    "node-cron": "^2.0.3",
+    "rollup": "^1.20.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.5.0",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/register": "^7.4.4",
+    "babel": "^6.23.0",
+    "babel-cli": "^7.0.0-0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^24.9.0",
+    "babel-loader": "^8.0.6",
+    "babel-minify": "^0.5.1",
+    "babel-minify-webpack-plugin": "^0.3.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "cross-env": "^5.2.1",
+    "eslint": "^4.12.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.5.1",
+    "mocha": "^6.1.4",
+    "nodemon": "^1.19.2",
+    "nodemon-webpack-plugin": "^4.1.1",
+    "nyc": "^14.1.1",
+    "regenerator-runtime": "^0.13.2",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.8",
+    "webpack-merge": "^4.2.2",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "resolutions": {
+    "babel-core": "7.0.0-bridge.0"
+  }
+}

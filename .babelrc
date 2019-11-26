@@ -1,0 +1,13 @@
+{
+    "presets": ["@babel/preset-env"],
+    "ignore": [
+        "node_modules",
+        "dist",
+    ],
+    "env": {
+        "test": {
+            "plugins": ["istanbul"]
+        }
+    },
+    "sourceType": "module"
+}

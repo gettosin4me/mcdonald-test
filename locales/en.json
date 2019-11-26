@@ -1,0 +1,9 @@
+{
+	"invalid.error": "Unknown error",
+	"user.unavailable": "User not found",
+	"success.create": "Successfully Created",
+	"success": "Success",
+	"error": "Error",
+	"success.update": "Successfully Updated",
+	"success.fetched": "success.fetched"
+}

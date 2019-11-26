@@ -1,0 +1,8 @@
+{
+	"invalid.error": "Erreur inconnue",
+	"user.unavailable": "Utilisateur non trouvé",
+	"success.create": "Créé avec succès",
+	"success": "Succès",
+	"error": "Erreur",
+	"success.update": "mise à jour réussie"
+}
