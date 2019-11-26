@@ -6,8 +6,7 @@ import InterestCalculatorWorkers from '../queues/workers/interest/interest.calcu
 const interest = (config) => {
     let running = false;
     cron.schedule(
-        // '0 0 * * MON',
-        '* * * * *',
+        '0 0 * * MON',
         () => {
             if (!running) {
                 running = true;
