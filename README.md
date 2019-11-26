@@ -14,3 +14,12 @@
 #### cron job run every monday by 12am - calculate interest
 
 #### cron job push task to queue and rabbitmq process it
+
+### routes
+
+#### POST http://localhost:{port}/drivers - endpoint to profile driver
+#### POST http://localhost:{port}/associations - endpoint to profile associations
+#### POST http://localhost:{port}/associations/:id - endpoint to update association
+#### POST http://localhost:{port}/drivers/save - endpoint to save daily
+#### POST http://localhost:{port}/transactions/:id - endpoint to update transactions
+#### POST http://localhost:{port}/drivers/:id/transactions/ - endpoint to retrieve transactions and saving history
