@@ -5,10 +5,11 @@
 2.  Node v10
 
 ## Steps to run the project
-### clone project
-### create a .env file
-### npm start - start project
-### node app/queues/consumers/interest/calculation/index.js - run queue
+#### clone project
+#### create a .env file
+#### copy .env.sample and update the value
+#### npm start - start project
+#### node app/queues/consumers/interest/calculation/index.js - run queue
 
 ## Note
 #### cron job run every monday by 12am - calculate interest
