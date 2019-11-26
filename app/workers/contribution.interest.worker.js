@@ -29,10 +29,8 @@ async function calculateInterest() {
 }
 
 async function fetch_weekly_contributions() {
-    const start_of_week = moment().startOf('isoWeek');
-    const end_of_week = moment().endOf('isoWeek');
-    // const start_of_week = moment().subtract(1, 'weeks').startOf('isoWeek');
-    // const end_of_week = moment().subtract(1, 'weeks').endOf('isoWeek');
+    const start_of_week = moment().subtract(1, 'weeks').startOf('isoWeek');
+    const end_of_week = moment().subtract(1, 'weeks').endOf('isoWeek');
     const transactions = await new TransactionRepository().group_by_driver_time(start_of_week, end_of_week);
 
     return transactions;
