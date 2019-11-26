@@ -5,6 +5,8 @@
 2.  Node v10
 
 ## Steps to run the project
+### clone project
+### create a .env file
 ### npm start - start project
 ### node app/queues/consumers/interest/calculation/index.js - run queue
 
