@@ -32,7 +32,7 @@ module.exports = () => {
     app.use(bodyParser.urlencoded({ extended: true }));
     app.use(bodyParser.json({ limit: 100000 }));
 
-    // init worker
+    // init cron jobs
     workers(config);
 
     // initialise database
