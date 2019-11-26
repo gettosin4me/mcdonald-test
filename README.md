@@ -19,7 +19,7 @@
 
 #### POST http://localhost:{port}/drivers - endpoint to profile driver
 #### POST http://localhost:{port}/associations - endpoint to profile associations
-#### POST http://localhost:{port}/associations/:id - endpoint to update association
+#### PUT http://localhost:{port}/associations/:id - endpoint to update association
 #### POST http://localhost:{port}/drivers/save - endpoint to save daily
-#### POST http://localhost:{port}/transactions/:id - endpoint to update transactions
-#### POST http://localhost:{port}/drivers/:id/transactions/ - endpoint to retrieve transactions and saving history
+#### PUT http://localhost:{port}/transactions/:id - endpoint to update transactions
+#### GET http://localhost:{port}/drivers/:id/transactions/ - endpoint to retrieve transactions and saving history
