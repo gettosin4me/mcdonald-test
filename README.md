@@ -9,4 +9,6 @@
 ### node app/queues/consumers/interest/calculation/index.js - run queue
 
 ## Note
-### cron job run every monday by 12am
+#### cron job run every monday by 12am - calculate interest
+
+#### cron job push task to queue and rabbitmq process it
